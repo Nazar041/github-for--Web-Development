@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<title>The first web_page</title>
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/source.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Заголовок</h1>
+	
+	<header id="header">
+	    <div class="inner">
+	        <img src="./images/logo.jpg" class="logo" alt="TrueStory - Блог о русском IT">
+	    </div>
+	    <div class="menu">
+	        <ul>
+	            <li><a href="#">Главная</a></li>
+	            <li><a href="#">Новости</a></li>
+	            <li><a href="#">Гайды</a></li>
+	            <li><a href="#">Мнение</a></li>
+	        </ul>
+	    </div>
+	</header>
+
+	<article class="article">
+            <div class="poster" style="background-image: url(./images/1.jpg);"></div>
+			<div class="details">
+                <a href="#" class="title">Microsoft прибарахлился Гитхабом за $7.5 млрд</a>
+                <div class="meta">
+                    <em class="date">05/06/2018</em>
+                    <a href="#" class="cat">Новости</a>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, est quidem aperiam soluta quisquam officia hic, magnam distinctio voluptates excepturi.</p>
+
+                    <p><span class="highlighted">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Corrupti harum laborum ipsum, eaque odit, eius quam assumenda saepe suscipit dignissimos dolore ea aliquam, modi impedit, hic repellat similique ad dolorem pariatur vel numquam. Fugit <a href="https://example.com">eius eveniet cumque</a> veritatis ipsam, totam a dolor, nemo distinctio. Voluptate, unde! Soluta perspiciatis explicabo voluptatem.</p>
+                </div>
+			</div>
+	</article>
+
+	<article class="article">
+            <div class="poster" style="background-image: url(./images/2.jpg);"></div>
+			<div class="details">
+                <a href="#" class="title">Сборка компа для программиста</a>
+                <div class="meta">
+                    <em class="date">03/06/2018</em>
+                    <a href="#" class="cat">Гайды</a>
+                </div>
+                <div class="content">
+                    <p>Или на что дать упор, consectetur adipisicing elit. Doloribus, est quidem aperiam soluta quisquam officia hic, magnam distinctio voluptates excepturi.</p>
+
+                    <p><span class="highlighted">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit. Corrupti harum laborum ipsum, eaque odit, eius quam assumenda saepe suscipit dignissimos dolore ea aliquam, modi impedit, hic repellat similique ad dolorem pariatur vel numquam. Fugit <a href="https://example.com">eius eveniet cumque</a> veritatis ipsam, totam a dolor, nemo distinctio. Voluptate, unde! Soluta perspiciatis explicabo voluptatem.</p>
+                </div>
+			</div>
+	</article>
+
 </body>
 </html>
