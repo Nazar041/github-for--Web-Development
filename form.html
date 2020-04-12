@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DevTool_form</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/js-format.png">
+	<script>
+		function valid (form) {
+			var fail = false;
+			var name = form.name.value;
+			var email = form.email.value;
+
+			var adr_pattern = ^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$
+
+			if(name == "" || name == " ")
+				fail = "You have not selected a topic!"
+			else if(adr_pattern.text(email) == false)
+				fail = "You did not email!"
+			if(fail)
+				alert(fail);
+		}
+	</script>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<form action="#" method="post" name="form" id="form">
+			<p class="text">Hire a Professiona Write Now</p>
+			<p><input type="text" name="name" class="input" maxlength="20" placeholder="Wath`s Your Topic?"></p>
+
+			<p class="txt">Deadline: <span class="ff">8 days left</span></p>
+				<select name="Months" class="item">
+				<option>January</option>
+				<option>February</option>	
+				<option>March</option>
+				<option>April</option>
+				<option>May</option>
+				<option>June</option>
+				<option>July</option>
+				<option>August</option>
+				<option>September</option>
+				<option>October</option>
+				<option selected>November</option>
+				<option>December</option>	
+				</select>
+
+				<select name="Data" class="items">
+				<option>12 AM</option>
+				<option>1 AM</option>
+				<option>2 AM</option>
+				<option>3 AM</option>
+				<option>4 AM</option>
+				<option>5 AM</option>	
+				<option>6 AM</option>
+				<option>7 AM</option>
+				<option>8 AM</option>
+				<option>9 AM</option>
+				<option>10 AM</option>
+				<option>11 AM</option>
+				<option>12 PM</option>
+				<option>1 PM</option>
+				<option>2 PM</option>
+				<option>3 PM</option>
+				<option selected>4 PM</option>
+				<option>5 PM</option>
+				<option>6 PM</option>
+				<option>7 PM</option>
+				<option>8 PM</option>
+				<option>9 PM</option>
+				<option>10 PM</option>
+				<option>11 PM</option>
+				</select><br />
+
+				<span class="word"><input type="button" name="button" class="less" value="-">
+					
+					<p class="pg">2 pages (550 words)</p>
+					
+					<input type="button" name="button" class="more" value="+">
+				</span>
+
+				<p><input type="email" name="email" class="input" id="email" maxlength="20" placeholder="Enter your email"></p>
+				
+				<p class="box"><input type="checkbox" name="checkbox" id="w1"><label for="w1">By clicking "Write my paper", you agree too our terms of service and privacy policy. We`ll occasionally send you promo and account related emails.</label></p>
+
+				<p><input type="button" onclick="valid(document.getElementById('form'))" name="submit" class="button" value="WRITE MY PAPER" title="Click ME!"></p>
+		</form>
+	</div>
+	
+	<style>
+		body {
+			background-color: silver;
+			font-family: Arial;
+		}
+
+		.wrapper {
+			width: 320px;
+			height: 421px;
+			margin: 50px auto;
+			background-color: #fff;
+			border: 1px solid #15A3F9;
+			border-radius: 5px;
+		}
+		
+		.text {
+			text-align: center;
+			font-size: 21px;
+			margin: 15px auto;
+		}
+		
+		.input {
+			width: 265px;
+			height: 35px;
+			border: 1px solid #2885CB;
+			border-radius: 30px;
+			margin-left: 19px;
+			padding-left: 15px;
+		}
+		
+		.button {
+			width: 270px;
+			height: 38px;
+			border: 1px solid #FF5115;
+			border-radius: 30px;
+			margin-left: 19px;
+			padding-left: 15px;
+			font-weight: bold;
+			background: #FF5115;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.txt {
+			font-size: 10px;
+			color: #C0C0C0;
+			margin-left: 30px;
+			margin-bottom: 2px;
+		}
+		
+		.ff {
+			font-size: 10px;
+			color: #3889CA;
+		}
+		
+		.item {
+			font-size: 15px;
+			width: 155px;
+			height: 38px;
+			border: 1px solid rgba(40, 139, 212, 0.3);
+			box-sizing: border-box;
+			border-radius: 30px;
+			margin-left: 19px;
+			padding-left: 15px;
+			position: relative;
+			cursor: pointer;
+			}
+		
+		.items {
+			font-size: 15px;
+			width: 100px;
+			height: 38px;
+			border: 1px solid rgba(40, 139, 212, 0.3);
+			box-sizing: border-box;
+			border-radius: 30px;
+			margin-left: 6px;
+			padding-left: 15px;
+			cursor: pointer;
+		}
+
+		.word {
+			display: flex;
+			width: 280px;
+			height: 38px;
+			border: 1px solid #2885CB;
+			border-radius: 30px;
+			margin-top: 17px;
+			margin-left: 19px;
+			}
+
+		.box {
+			font-size: 11px;
+			color: #6A6C71;
+			margin-left: 12px;
+			margin-right: 12px;
+		}
+
+		.less {
+			width: 40px;
+			height: 39px;
+			position: relative;
+			border-right: 1px solid #2885CB;
+			border-radius: 50px 0 0 50px;
+			background: #fff;
+			color: #4169E1;
+			cursor: pointer;
+			font-family: Arial;
+			font-size: 35px;
+		}
+
+		.more {
+			width: 40px;
+			height: 39px;
+			position: relative;
+			left: 31px;
+			border-left: 1px solid #2885CB;
+			border-radius: 0 50px 50px 0;
+			background: #fff;
+			color: #4169E1;
+			cursor: pointer;
+			font-family: Arial;
+			font-size: 35px;
+		}
+
+		.pg {
+			padding-left: 25px;
+		}
+
+	</style>
+
+</body>
+</html>
