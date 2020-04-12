@@ -4,22 +4,6 @@
 	<meta charset="UTF-8">
 	<title>DevTool_form</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/js-format.png">
-	<script>
-		function valid (form) {
-			var fail = false;
-			var name = form.name.value;
-			var email = form.email.value;
-
-			var adr_pattern = ^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$
-
-			if(name == "" || name == " ")
-				fail = "You have not selected a topic!"
-			else if(adr_pattern.text(email) == false)
-				fail = "You did not email!"
-			if(fail)
-				alert(fail);
-		}
-	</script>
 </head>
 <body>
 	
@@ -82,7 +66,7 @@
 				
 				<p class="box"><input type="checkbox" name="checkbox" id="w1"><label for="w1">By clicking "Write my paper", you agree too our terms of service and privacy policy. We`ll occasionally send you promo and account related emails.</label></p>
 
-				<p><input type="button" onclick="valid(document.getElementById('form'))" name="submit" class="button" value="WRITE MY PAPER" title="Click ME!"></p>
+				<p><input type="submit" name="submit" class="button" value="WRITE MY PAPER" title="Click ME!"></p>
 		</form>
 	</div>
 	
@@ -215,6 +199,8 @@
 		}
 
 	</style>
+
+	<script src="js.js"></script>
 
 </body>
 </html>
