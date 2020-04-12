@@ -5,6 +5,7 @@ const form = document.getElementById('form');
 // це означає що коли форма буде віджправлена ми запустим функцію valid
 form.addEventListener('submit', valid);
 
+
 function valid (event) {
     event.preventDefault(); // це треба щоб сторінка не перезагружалась
 
@@ -18,11 +19,11 @@ function valid (event) {
     console.log('email = ' + email);
     console.log('fail = ' + fail);
 
-	var adr_pattern = '^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$';
+	var adr_pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	if(name == "" || name == " ")
 		fail = "You have not selected a topic!"
-	else if(adr_pattern.text(email) == false)
+	else if(adr_pattern.test(email) == false)
 		fail = "You did not email!"
 	if(fail)
         alert(fail);
@@ -32,5 +33,5 @@ function valid (event) {
 
 }
 
-console.log('script end');
 
+console.log('script end');

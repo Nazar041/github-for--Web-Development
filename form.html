@@ -4,6 +4,21 @@
 	<meta charset="UTF-8">
 	<title>DevTool_form</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/js-format.png">
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+	
 </head>
 <body>
 	
@@ -12,7 +27,14 @@
 			<p class="text">Hire a Professiona Write Now</p>
 			<p><input type="text" name="name" class="input" maxlength="20" placeholder="Wath`s Your Topic?"></p>
 
+
+			<div class="datepicker_wrap">
+				<label for="datepicker">Date</label>
+				<input type="text" name="datepicker" id="datepicker">
+			</div>
+
 			<p class="txt">Deadline: <span class="ff">8 days left</span></p>
+			
 				<select name="Months" class="item">
 				<option>January</option>
 				<option>February</option>	
@@ -55,14 +77,18 @@
 				<option>11 PM</option>
 				</select><br />
 
-				<span class="word"><input type="button" name="button" class="less" value="-">
+			
+				<input type="hidden" name="pages">
+				
+				<span class="word">
+					<button class="less"><i class="fas fa-minus"></i></button>
 					
-					<p class="pg">2 pages (550 words)</p>
+					<p class="pg"><span id="page_munb">1</span> pages (<span id="words">225</span> words)</p>
 					
-					<input type="button" name="button" class="more" value="+">
+					<button class="more"><i class="fas fa-plus"></i></button>
 				</span>
 
-				<p><input type="email" name="email" class="input" id="email" maxlength="20" placeholder="Enter your email"></p>
+				<p><input type="text" name="email" class="input" id="email" maxlength="20" placeholder="Enter your email"></p>
 				
 				<p class="box"><input type="checkbox" name="checkbox" id="w1"><label for="w1">By clicking "Write my paper", you agree too our terms of service and privacy policy. We`ll occasionally send you promo and account related emails.</label></p>
 
@@ -168,21 +194,26 @@
 		}
 
 		.less {
-			width: 40px;
-			height: 39px;
+			border: 0;
+			width: 38px;
+			height: 38px;
 			position: relative;
 			border-right: 1px solid #2885CB;
 			border-radius: 50px 0 0 50px;
 			background: #fff;
 			color: #4169E1;
 			cursor: pointer;
-			font-family: Arial;
-			font-size: 35px;
+
+			font-size: 23px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
 		}
 
 		.more {
-			width: 40px;
-			height: 39px;
+			border: 0;
+			width: 38px;
+			height: 38px;
 			position: relative;
 			left: 31px;
 			border-left: 1px solid #2885CB;
@@ -190,17 +221,33 @@
 			background: #fff;
 			color: #4169E1;
 			cursor: pointer;
-			font-family: Arial;
-			font-size: 35px;
+			
+			font-size: 23px;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
 		}
 
 		.pg {
 			padding-left: 25px;
+			margin: 10px 0;
 		}
+
+		.datepicker_wrap{
+			position: relative;
+		}
+
+		.datepicker_wrap #datepicker{
+			position: absolute;
+			opacity: 0;
+		}
+
 
 	</style>
 
-	<script src="js.js"></script>
+	<!-- <script src="js.js"></script> -->
+	<script src="jq_script.js"></script>
+
 
 </body>
 </html>
