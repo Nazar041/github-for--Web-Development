@@ -16,9 +16,9 @@
   crossorigin="anonymous"></script>
 
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
-
+ 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-	
+
 </head>
 <body>
 	
@@ -28,27 +28,14 @@
 			<p><input type="text" name="name" class="input" maxlength="20" placeholder="Wath`s Your Topic?"></p>
 
 
-			<div class="datepicker_wrap">
-				<label for="datepicker">Date</label>
-				<input type="text" name="datepicker" id="datepicker">
-			</div>
 
 			<p class="txt">Deadline: <span class="ff">8 days left</span></p>
 			
-				<select name="Months" class="item">
-				<option>January</option>
-				<option>February</option>	
-				<option>March</option>
-				<option>April</option>
-				<option>May</option>
-				<option>June</option>
-				<option>July</option>
-				<option>August</option>
-				<option>September</option>
-				<option>October</option>
-				<option selected>November</option>
-				<option>December</option>	
-				</select>
+			<div class="datepicker_wrap">
+				<label for="datepicker">DATE</label>
+				<span class="tri"></span>
+				<input type="text" name="datepicker" id="datepicker">
+			</div>
 
 				<select name="Data" class="items">
 				<option>12 AM</option>
@@ -101,7 +88,7 @@
 			background-color: silver;
 			font-family: Arial;
 		}
-
+		
 		.wrapper {
 			width: 320px;
 			height: 421px;
@@ -151,29 +138,19 @@
 			color: #3889CA;
 		}
 		
-		.item {
-			font-size: 15px;
-			width: 155px;
-			height: 38px;
-			border: 1px solid rgba(40, 139, 212, 0.3);
-			box-sizing: border-box;
-			border-radius: 30px;
-			margin-left: 19px;
-			padding-left: 15px;
-			position: relative;
-			cursor: pointer;
-			}
-		
 		.items {
 			font-size: 15px;
-			width: 100px;
+			width: 118px;
 			height: 38px;
-			border: 1px solid rgba(40, 139, 212, 0.3);
+			border: 1px solid #4169E1;
 			box-sizing: border-box;
 			border-radius: 30px;
 			margin-left: 6px;
 			padding-left: 15px;
 			cursor: pointer;
+			position: relative;
+			bottom: 38px;
+			left: 180px;
 		}
 
 		.word {
@@ -182,8 +159,9 @@
 			height: 38px;
 			border: 1px solid #2885CB;
 			border-radius: 30px;
-			margin-top: 17px;
 			margin-left: 19px;
+			position: relative;
+    		bottom: 15px;
 			}
 
 		.box {
@@ -203,7 +181,6 @@
 			background: #fff;
 			color: #4169E1;
 			cursor: pointer;
-
 			font-size: 23px;
 		    display: flex;
 		    align-items: center;
@@ -234,12 +211,42 @@
 		}
 
 		.datepicker_wrap{
+			text-align: center;
 			position: relative;
+			font-size: 15px;
+			width: 155px;
+			height: 38px;
+			border: 1px solid #4169E1;
+			box-sizing: border-box;
+			border-radius: 30px;
+			margin-left: 19px;
+			cursor: pointer;
+		}
+		
+		.tri {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 5px;
+			height: 5px;
+			border-top: 10px solid #4169E1;
+			border-right: 10px solid transparent ;
+			/*   border-bottom: 40px solid yellow; */
+			border-left: 10px solid transparent;
 		}
 
 		.datepicker_wrap #datepicker{
 			position: absolute;
+			right: 1px;
+			left: 1px;
+			width: 155px;
+			height: 38px;
+			border: 1px solid #4169E1;
+			box-sizing: border-box;
+			border-radius: 30px;
+			cursor: pointer;
 			opacity: 0;
+
 		}
 
 

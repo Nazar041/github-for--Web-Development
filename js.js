@@ -1,9 +1,10 @@
+"use strict"
 console.log('script start');
 
 const form = document.getElementById('form');
 
 // це означає що коли форма буде віджправлена ми запустим функцію valid
-form.addEventListener('submit', valid);
+form .addEventListener('submit', valid);
 
 
 function valid (event) {
